@@ -42,6 +42,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Use cached development node_modules
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: development-node_modules-${{ env.CACHE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            development-node_modules-${{ env.CACHE_VERSION }}-
+            development-node_modules-
       - name: Lint
         run: yarn test:lint
       - name: Static type check
@@ -59,6 +67,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Use cached development node_modules
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: development-node_modules-${{ env.CACHE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            development-node_modules-${{ env.CACHE_VERSION }}-
+            development-node_modules-
       - name: Build storybook
         run: yarn build-storybook
       - name: Upload artifact
@@ -75,6 +91,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Use cached development node_modules
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: development-node_modules-${{ env.CACHE_VERSION }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            development-node_modules-${{ env.CACHE_VERSION }}-
+            development-node_modules-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
