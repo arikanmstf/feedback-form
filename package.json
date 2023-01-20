@@ -6,17 +6,17 @@
     "dev": "dotenv -e .env.dev.local -- next dev",
     "build": "next build",
     "test:unit": "jest --coverage --coverageReporters json-summary",
-    "test:lint": "eslint '{src,pages,public,.storybook}/**/*.{js,ts,jsx,tsx}'",
-    "test:types": "tsc",
-    "test:e2e:local": "dotenv -e .env.dev.local -- start-server-and-test dev http://localhost:3000 cypress:open",
-    "test:e2e:ci": "dotenv -e .env.dev.local -- start-server-and-test dev http://localhost:3000 cypress:run",
+    "test:lint": "yarn run eslint '{src,pages,public,.storybook}/**/*.{js,ts,jsx,tsx}'",
+    "test:types": "yarn run tsc",
+    "test:e2e:local": "yarn run dotenv -e .env.dev.local -- start-server-and-test dev http://localhost:3000 cypress:open",
+    "test:e2e:ci": "yarn run dotenv -e .env.dev.local -- start-server-and-test dev http://localhost:3000 cypress:run",
     "export": "next export",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "cypress:open":  "cypress open",
-    "cypress:run":  "cypress run"
+    "cypress:open":  "yarn run cypress open",
+    "cypress:run":  "yarn run cypress run"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
