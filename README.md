@@ -7,6 +7,8 @@ Mock project of a feedback form. Powered by nextJs.
 * Since app is running on mocks, data will reset once you refresh the page.
 
 ### Tests
+https://user-images.githubusercontent.com/13220774/213797905-9635ca0a-2a0a-4ca8-9c08-fc80691e2aa7.mov
+
 This project uses following tools for testing;
 * Eslint for code quality & readability,
 * Typescript for static type checking
@@ -41,3 +43,6 @@ This app works compatible with screen readers such as VoiceOver
 * Simply run the app
 
 `$: yarn dev`
+
+
+
