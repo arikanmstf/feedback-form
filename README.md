@@ -1,9 +1,14 @@
 # feedback-form
 Mock project of a feedback form. Powered by nextJs.
 
+#### Storybook
+https://arikanmstf.github.io/feedback-form
+
 ### Demo
 * Fill out the form and submit;
 * You'll see your data at the next page.
+* Click back button and fill out another review
+* You'll see both of the data you entered, and chart is updated.
 * Since app is running on mocks, data will reset once you refresh the page.
 
 ### Tests

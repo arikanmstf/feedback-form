@@ -20,6 +20,7 @@ describe('Home page', () => {
 
     // submit the form
     cy.contains('button', 'Post').click();
+    cy.get('[aria-label="Give 5 stars"]').click();
 
     // expect redirection to comments page and display of new data
     // timeout is longer here; server works slow at local machine
