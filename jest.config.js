@@ -14,5 +14,6 @@ module.exports = {
   globals: {
     window: {},
   },
+  globalSetup: '<rootDir>/global-setup.js',
   transformIgnorePatterns: [`<rootDir>/node_modules/(?!(${modulesToTransform.join('|')})).+\\.js$`],
 };
