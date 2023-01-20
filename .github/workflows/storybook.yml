@@ -55,6 +55,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
   test:
     runs-on: ubuntu-latest
+    needs: install
     steps:
       - name: Lint
         run: ${{ steps.detect-package-manager.outputs.runner }} test:lint
@@ -66,8 +67,10 @@ jobs:
         uses: MishaKav/jest-coverage-comment@main
       - name: e2e tests
         run: ${{ steps.detect-package-manager.outputs.runner }} test:e2e:ci
+
   build-storybook:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Build storybook
         run: ${{ steps.detect-package-manager.outputs.runner }} build-storybook
