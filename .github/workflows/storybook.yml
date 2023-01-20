@@ -67,6 +67,7 @@ jobs:
       - name: e2e tests
         run: ${{ steps.detect-package-manager.outputs.runner }} test:e2e:ci
   build-storybook:
+    runs-on: ubuntu-latest
     steps:
       - name: Build storybook
         run: ${{ steps.detect-package-manager.outputs.runner }} build-storybook
