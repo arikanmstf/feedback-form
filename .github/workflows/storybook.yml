@@ -67,12 +67,13 @@ jobs:
       - name: e2e tests
         run: ${{ steps.detect-package-manager.outputs.runner }} test:e2e:ci
   build-storybook:
-    - name: Build storybook
-      run: ${{ steps.detect-package-manager.outputs.runner }} build-storybook
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: ./storybook-static
+    steps:
+      - name: Build storybook
+        run: ${{ steps.detect-package-manager.outputs.runner }} build-storybook
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./storybook-static
 
   deploy-storybook:
     environment:
