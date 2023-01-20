@@ -69,6 +69,8 @@ jobs:
         run: yarn test:unit
       - name: Comment coverage
         uses: MishaKav/jest-coverage-comment@main
+      - name: Install Cypress if missing
+        run: npx cypress install
       - name: e2e tests
         run: yarn test:e2e:ci
 
