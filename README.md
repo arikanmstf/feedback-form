@@ -5,7 +5,7 @@ Mock project of a feedback form. Powered by nextJs.
 Live at: https://feedback-form-arikanmstf.vercel.app/
 Note that, live demo won't work when submitting the form, the reason is nextJs deployment runs with static assets. So mock service worker can not be initialized.
 
-It'll work only when you run locally. See `Development` section at the bottom.
+It'll work only when you run locally. See `Contribute` section at the bottom.
 
 * Fill out the form and submit;
 * You'll see your data at the next page.
